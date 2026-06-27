@@ -47,7 +47,8 @@ spec:
         #!/bin/sh
         set -e
         echo "Installing dependencies..."
-        npm ci
+        # CHANGED: Swapped npm ci to npm install
+        npm install
         echo "Running ESLint..."
         npm run lint $(params.args)
 
@@ -72,6 +73,7 @@ spec:
         #!/bin/sh
         set -e
         echo "Installing dependencies..."
-        npm ci
+        # CHANGED: Swapped npm ci to npm install
+        npm install
         echo "Running Jest tests..."
         npm test $(params.args)
